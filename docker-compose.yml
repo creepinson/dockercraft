@@ -1,8 +1,10 @@
-dockercraft:
-  container_name: dockercraft
-  build: .
-  volumes:
-    - "/var/run/docker.sock:/var/run/docker.sock"
-  ports:
-    - "25565:25565"
-  tty: true
+version: "3"
+services:
+  dockercraft:
+    container_name: dockercraft
+    build: .
+    volumes:
+      - "/var/run/docker.sock:/var/run/docker.sock"
+    ports:
+      - "25565:25565"
+    tty: true
